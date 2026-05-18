@@ -1,0 +1,234 @@
+{{ define "main" }}
+<script>
+    (function() {
+        var defaultHeader = document.querySelector('header') || document.querySelector('[role="banner"]');
+        if (defaultHeader) {
+            defaultHeader.style.display = 'none';
+            defaultHeader.style.height = '0';
+            defaultHeader.style.padding = '0';
+            defaultHeader.style.margin = '0';
+        }
+    })();
+</script>
+
+<div style="background-color: #111111; width: 100%; padding: 12px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; color: #ffffff; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase;">
+            {{ .Site.Title }}
+        </div>
+        <div style="display: flex; gap: 25px;">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.15s ease-in-out;">{{ .Name }}</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<div class="full-bleed-banner" style="margin-bottom: 30px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden;">
+    <img src="/images/club_banner_field_day.webp" alt="Field Day Banner" style="width: 100%; height: auto; display: block;">
+</div>
+
+<table style="width: 100%; max-width: 1200px; margin: 0 auto; border-collapse: collapse; border: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+  <tr style="vertical-align: top; border: none;">
+    
+    <td style="width: 70%; padding-right: 40px; border: none; background: transparent; box-sizing: border-box;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="/images/club_logo.webp" alt="BSARC Logo" style="display: block; margin: 0 auto; max-width: 200px; height: auto;">
+        </div>
+        
+        <div class="nested-copy-line-height">
+            <h1 style="font-size: 28px; margin: 0 0 10px 0; color: #111111; font-weight: bold;">{{ .Site.Data.homepage.welcome.heading }}</h1>
+            <h3 style="font-size: 18px; margin: 0 0 20px 0; color: #555555; font-weight: normal;">{{ .Site.Data.homepage.welcome.subheading }}</h3>
+            <hr style="border: 0; border-top: 1px solid #eeeeee; margin: 20px 0;">
+            <p style="font-size: 15px; line-height: 1.6; color: #333333; margin-bottom: 30px;">{{ .Site.Data.homepage.welcome.text }}</p>
+
+            <h2 style="font-size: 20px; color: #111111; margin: 30px 0 15px 0; border-bottom: 1px solid #dddddd; padding-bottom: 5px; font-weight: bold;">Club Net Schedules</h2>
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 30px;">
+                <thead>
+                    <tr style="background-color: #f7f7f7; text-align: left; border-bottom: 2px solid #dddddd;">
+                        <th style="padding: 10px; font-weight: bold;">Net Name</th>
+                        <th style="padding: 10px; font-weight: bold;">Frequency / Details</th>
+                        <th style="padding: 10px; font-weight: bold;">Day & Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Site.Data.homepage.nets }}
+                    <tr style="border-bottom: 1px solid #eeeeee;">
+                        <td style="padding: 10px;"><strong>{{ .name }}</strong></td>
+                        <td style="padding: 10px;">{{ .freq }}</td>
+                        <td style="padding: 10px;">{{ .time }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+
+            <h2 style="font-size: 20px; color: #111111; margin: 30px 0 15px 0; border-bottom: 1px solid #dddddd; padding-bottom: 5px; font-weight: bold;">Meeting Schedules</h2>
+            <h3 style="font-size: 16px; color: #333333; margin: 20px 0 10px 0; font-weight: bold;">Monthly Club Meetings</h3>
+            <p style="font-size: 14px; line-height: 1.5; color: #444444; margin-bottom: 15px;">{{ .Site.Data.homepage.meetings.monthly.text }}</p>
+            
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 25px;">
+                <thead>
+                    <tr style="background-color: #f7f7f7; text-align: left; border-bottom: 2px solid #dddddd;">
+                        <th style="padding: 10px; font-weight: bold;">Months</th>
+                        <th style="padding: 10px; font-weight: bold;">Location</th>
+                        <th style="padding: 10px; font-weight: bold;">Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Site.Data.homepage.meetings.locations }}
+                    <tr style="border-bottom: 1px solid #eeeeee;">
+                        <td style="padding: 10px;"><strong>{{ .months }}</strong></td>
+                        <td style="padding: 10px;">{{ .name }}</td>
+                        <td style="padding: 10px;">{{ .address }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+
+            <h3 style="font-size: 16px; color: #333333; margin: 20px 0 10px 0; font-weight: bold;">Weekly Breakfast Meeting</h3>
+            <p style="font-size: 14px; line-height: 1.5; color: #444444; margin-bottom: 30px;">{{ .Site.Data.homepage.meetings.breakfast.text }}</p>
+
+            {{ .Content }}
+
+        </div>
+    </td>
+
+    <td style="width: 30%; border-left: 1px solid #eeeeee; padding-left: 30px; min-width: 280px; background: transparent; box-sizing: border-box;">
+
+        <div style="margin-bottom: 35px; background-color: #f4fbf4; padding: 18px; border-radius: 8px; border: 1px solid #c8e6c9; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h3 style="font-size: 15px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #2e7d32; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #2e7d32;">Membership & Dues</h3>
+            <p style="font-size: 13px; color: #444444; line-height: 1.5; margin-bottom: 15px;">
+                Member Dues are <strong>$30.00</strong> (or $40.00 for family). You can securely pay your annual dues or make a club donation using the PayPal portal below.
+            </p>
+            
+            <div style="text-align: center; margin-bottom: 15px;">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin: 0; display: inline-block;">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="N5NHK57GNLMZQ">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="max-width: 100%; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
+
+            <p style="font-size: 12px; color: #555555; line-height: 1.5; margin: 0; padding-top: 10px; border-top: 1px solid #c8e6c9;">
+                <strong>Need to join?</strong> <a href="/pdf/bsarc_membership_application.pdf" style="color: #2e7d32; text-decoration: none; font-weight: bold;">Download the Application</a>.<br>
+                <strong>Questions?</strong> Email our <a href="mailto:treasurer@n4gm.org" style="color: #2e7d32; text-decoration: none; font-weight: bold;">Treasurer</a>.
+            </p>
+        </div>
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">QRZ Callsign Lookup</h3>
+            <form action="https://www.qrz.com/db/" method="get" target="_blank" style="display: flex; gap: 8px;">
+                <input type="text" name="callsign" placeholder="Callsign..." required 
+                       style="padding: 6px 10px; font-size: 13px; border: 1px solid #cccccc; border-radius: 4px; flex-grow: 1; text-transform: uppercase; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <button type="submit" 
+                        style="padding: 6px 14px; font-size: 13px; background-color: #111111; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; transition: background-color 0.15s ease;">
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Brunswick County Radio Census</h3>
+            <p style="font-size: 13px; color: #555555; line-height: 1.4; margin-bottom: 12px;">
+                View a live, real-time database of all FCC-licensed amateur operators registered within Brunswick County.
+            </p>
+            <a href="https://www.qrz.com/db/?fips=37019" target="_blank"
+                style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; padding: 8px 12px; font-size: 13px; background-color: #111111; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; transition: background-color 0.15s ease;">
+                📊 Launch Live County Directory
+            </a>
+        </div>
+
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Web Resources</h3>
+            <p style="font-size: 13px; color: #555555; line-height: 1.4; margin-bottom: 12px;">
+                Browse our comprehensive web directory for technical calculators, federal FCC systems, and regional amateur networks.
+            </p>
+            <a href="/links/"
+            style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; padding: 8px 12px; font-size: 13px; background-color: #111111; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; transition: background-color 0.15s ease;">
+                🌐 Open Web Directory
+            </a>
+        </div>
+
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Club Framework</h3>
+            <p style="font-size: 13px; color: #555555; line-height: 1.4; margin-bottom: 12px;">
+                Review our official UUNAA corporate compliance records, historical founding documents, and standard routine order bylaws.
+            </p>
+            <a href="/uunaa/"
+            style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; padding: 8px 12px; font-size: 13px; background-color: #111111; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; transition: background-color 0.15s ease;">
+                📜 View Legal & Bylaws Hub
+            </a>
+        </div>
+
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Member Directory</h3>
+            <p style="font-size: 13px; color: #555555; line-height: 1.4; margin-bottom: 12px;">
+                Access our verified membership roster, check active member callsigns, and review current licensing status metrics.
+            </p>
+            <a href="/roster/"
+            style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; padding: 8px 12px; font-size: 13px; background-color: #111111; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; transition: background-color 0.15s ease;">
+                👥 Launch Active Club Roster
+            </a>
+        </div>
+
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">FCC Renewal</h3>
+            <p style="font-size: 13px; color: #555555; line-height: 1.4; margin-bottom: 12px;">
+                Amateur Radio License Renewal Information.
+            </p>
+            <a href="/fcc-renewal/"
+            style="display: inline-block; width: 100%; text-align: center; box-sizing: border-box; padding: 8px 12px; font-size: 13px; background-color: #111111; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; transition: background-color 0.15s ease;">
+                � Launch FCC Renewal Information
+            </a>
+        </div>
+
+        <div style="margin-bottom: 35px; text-align: center;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111; text-align: left;">Propagation Conditions</h3>
+            <a href="https://www.hamqsl.com/solar.html" target="_blank">
+                <img src="https://www.hamqsl.com/solarvhf.php" alt="Solar-Terrestrial Data" style="border: none; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+            </a>
+        </div>
+
+        <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Club News & Updates</h3>
+        <p style="font-size: 13px; color: #555555; line-height: 1.4; margin-bottom: 15px;">
+            Our Secretary publishes updates regularly. "Associate" members must register each year to continue receiving club e-mails and newsletters.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 35px 0; font-size: 13px; line-height: 1.6;">
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>📄</span>
+                <a href="/pdf/weekly_bulletin.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">Download the Latest Weekly Bulletin (PDF)</a>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>📧</span>
+                <span><strong>Got News?</strong> Send updates to the <a href="mailto:BSARC.sec@gmail.com" style="color: #357edd; text-decoration: none; font-weight: bold;">Club Secretary</a> for posting.</span>
+            </li>
+        </ul>
+
+        <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Documents & Resources</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.6;">
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>🏫</span>
+                <a href="/pdf/amateur_test_sessions.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">Amateur Test Sessions (PDF)</a>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>📄</span>
+                <a href="/pdf/bsarc_membership_application.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">BSARC Membership Application (PDF)</a>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>👕</span>
+                <a href="/pdf/club_clothing_and_attire.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">Club Clothing & Attire Order Form (PDF)</a>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>📜</span>
+                <a href="/pdf/bsarc_sro.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">Download Club Standing Rules (PDF)</a>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                <span>🗺️</span>
+                <a href="/pdf/arrl_band_plan.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">ARRL Band Plan Chart (PDF)</a>
+            </li>
+        </ul>
+    </td>
+
+  </tr>
+</table>
+{{ end }}

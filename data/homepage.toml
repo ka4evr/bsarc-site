@@ -1,0 +1,61 @@
+# ====================================================================
+# BSARC HOMEPAGE DATA SHEET - EDIT THIS FILE TO UPDATE THE SITE
+# ====================================================================
+
+[welcome]
+heading = "Welcome to N4GM"
+subheading = "Brunswick Shores Amateur Radio Club"
+text = "Welcome to the digital home of the Brunswick Shores Amateur Radio Club (BSARC). We serve the amateur radio community in southeastern North Carolina, supporting emergency communications (ARES/RACES) and promoting the hobby through community events, testing, and regular nets."
+last_updated = "February 25, 2026"
+
+# --- Club Net Logs ---
+
+[[nets]]
+name = "The Shrimp NET (KI4KK)"
+freq = "147.315 MHz (+600 kHz, T 118.8)"
+time = "Mondays @ 8:30 AM"
+
+[[nets]]
+name = "AUXCOM / ARES NET"
+freq = "147.315 MHz (+600 kHz, T 118.8)"
+time = "Mondays @ 7:00 PM"
+
+[[nets]]
+name = "Local Ragchew"
+freq = "147.315 MHz (Simplex / Repeater)"
+time = "Daily Echo"
+
+# --- Meeting Schedules ---
+[meetings.monthly]
+text = "Meetings are held on the second Wednesday of each month from 6:00 PM to 8:00 PM. The location alternates monthly between Calabash and Supply. Meetings are also normally broadcasted via ZOOM (links are sent directly to members and guests)."
+
+[[meetings.locations]]
+months = "Feb, Apr, Jun, Aug, Oct, Dec"
+name = "Calabash EMS Building"
+address = "9031 Beach Drive SW, Calabash, NC 28467"
+
+[[meetings.locations]]
+months = "Jan, Mar, May, Jul, Sep, Nov"
+name = "BEMC Headquarters"
+address = "795 Ocean Hwy, Supply, NC 28462"
+
+[meetings.breakfast]
+text = "A group of local hams meets every Wednesday morning at 8:15 AM at the Tee Time Cafe in Shallotte (126 Holden Beach Road). Club business is often informally discussed, and all are welcome!"
+
+# ================================================================
+# REPEATER INFRASTRUCTURE DATA
+# ================================================================
+
+[[repeaters]]
+frequency = "147.315 MHz"
+offset = "+600 kHz"
+tone = "118.8 Hz"
+location = "Supply, NC"
+notes = "Primary Club Repeater / Net Home (EchoLink: N4GM-R)"
+
+[[repeaters]]
+frequency = "444.300 MHz"
+offset = "+5.0 MHz"
+tone = "118.8 Hz"
+location = "Calabash, NC"
+notes = "Local Area Coverage"

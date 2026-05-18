@@ -1,0 +1,50 @@
+baseURL = 'http://192.168.68.109/'
+languageCode = 'en-us'
+title = "Brunswick Shores Amateur Radio Club"
+theme = 'ananke'
+
+[params]
+  show_recent_posts = false
+  custom_css = ["custom.css"]
+  # This built-in setting strips the text overlay off the main banner:
+  omit_header_text = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "ARES Info"
+  url = "/ares/"
+  weight = 20
+
+[[menu.main]]
+  name = "Repeaters"
+  url = "/repeaters/"
+  weight = 30
+
+[[menu.main]]
+  name = "Officers"
+  url = "/board/"
+  weight = 40
+
+[[menu.main]]
+  name = "Gallery"
+  url = "/gallery/"
+  weight = 40
+
+[[menu.main]]
+  name = "ARRL Program"
+  url = "/arrl/"
+  weight = 50
+
+[[menu.main]]
+  name = "New Member Guide"
+  url = "/welcome-kit/"
+  weight = 60
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

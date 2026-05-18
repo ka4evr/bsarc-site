@@ -1,0 +1,29 @@
+{{ $type := .Get "type" }}
+<table>
+  <thead>
+    <tr>
+      <th style="width: 40%;">Position / Role</th>
+      <th style="width: 35%;">Name</th>
+      <th style="width: 25%;">QRZ Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ if eq $type "officers" }}
+      {{ range .Site.Data.roster.officers }}
+      <tr>
+        <td><strong>{{ .role }}</strong></td>
+        <td>{{ .name }}</td>
+        <td><a href="http://www.qrz.com/db/{{ .callsign }}" target="_blank" style="color: #357edd; text-decoration: none; font-weight: bold;">{{ .callsign }}</a></td>
+      </tr>
+      {{ end }}
+    {{ else if eq $type "committees" }}
+      {{ range .Site.Data.roster.committees }}
+      <tr>
+        <td><strong>{{ .role }}</strong></td>
+        <td>{{ .name }}</td>
+        <td><a href="http://www.qrz.com/db/{{ .callsign }}" target="_blank" style="color: #357edd; text-decoration: none; font-weight: bold;">{{ .callsign }}</a></td>
+      </tr>
+      {{ end }}
+    {{ end }}
+  </tbody>
+</table>

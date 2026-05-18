@@ -1,0 +1,126 @@
+# ====================================================================
+# MASTER CLUB ROSTER DATA SHEET - UPDATE ONCE, UPDATES BOTH PAGES
+# ====================================================================
+
+# --- Core Elected Board Members ---
+[[officers]]
+role = "President"
+name = "Mark Sergent"
+callsign = "KA4EVR"
+
+[[officers]]
+role = "Vice President"
+name = "Dee Rack"
+callsign = "KQ4HQK"
+
+[[officers]]
+role = "Treasurer"
+name = "Ephraim Botnick"
+callsign = "WQ4N"
+
+[[officers]]
+role = "Secretary"
+name = "Doug Ward"
+callsign = "KO4ZYP"
+
+[[officers]]
+role = "Technology Director"
+name = "Curt Seaton"
+callsign = "K4JCS"
+
+[[officers]]
+role = "Board Member"
+name = "David Pennell"
+callsign = "NP2MR"
+
+[[officers]]
+role = "President Emeritus"
+name = "Robert Jesus"
+callsign = "K1MJJ"
+
+
+# --- Appointed Committees & Volunteers ---
+[[committees]]
+role = "VE Team Leader"
+name = "George Fryer"
+callsign = "KI4KK"
+
+[[committees]]
+role = "Activities Chairman"
+name = "Mark Sergent"
+callsign = "KA4EVR"
+
+[[committees]]
+role = "Field Day Chairman"
+name = "Frank Shumaker"
+callsign = "KQ4MDB"
+
+[[committees]]
+role = "Field Day Food Team"
+name = "Ephraim Botnick"
+callsign = "WQ4N"
+
+[[committees]]
+role = "Field Day Food Team"
+name = "Fred Carroll"
+callsign = "AJ4CN"
+
+[[committees]]
+role = "Field Day Food Team"
+name = "Lauren Jesus"
+callsign = "W1LKF"
+
+[[committees]]
+role = "Field Day Food Team"
+name = "Lindsey Billings"
+callsign = "KD9OIT"
+
+[[committees]]
+role = "Webmaster / Station Safety"
+name = "Dave Lippincott"
+callsign = "KM4EMR"
+
+[[committees]]
+role = "Club Station Trustee"
+name = "Curt Seaton"
+callsign = "K4JCS"
+
+[[committees]]
+role = "QSL Manager"
+name = "Jim Flesher"
+callsign = "W4ICN"
+
+[[committees]]
+role = "Equipment Manager"
+name = "John Boucino"
+callsign = "KQ4JNZ"
+
+[[committees]]
+role = "JOTA Liaison"
+name = "Paul Gawron"
+callsign = "KI4SPO"
+
+[[committees]]
+role = "Bald Head Island Event"
+name = "Dave Lippincott"
+callsign = "KM4EMR"
+
+[[committees]]
+role = "Newsletter Editor"
+name = "George Fryer"
+callsign = "KI4KK"
+
+[[committees]]
+role = "Sunshine Committee"
+name = "Robert Jesus"
+callsign = "K1MJJ"
+
+[[committees]]
+role = "Sunshine Committee"
+name = "William Sirginson"
+callsign = "N4PEN"
+
+[[committees]]
+role = "Video & Photography"
+name = "Mary Freeman"
+callsign = "KQ4NJZ"

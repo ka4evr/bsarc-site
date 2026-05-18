@@ -1,0 +1,118 @@
+# ====================================================================
+# OFFICIAL 2026 CLUB CALENDAR - UPDATED 2/25/2026
+# ====================================================================
+last_updated = "February 25, 2026"
+
+[[event]]
+date = "2026-01-24"
+display_date = "January 24-25"
+name = "Winter Field Day"
+location = "Dutchman's Creek County Park"
+
+[[event]]
+date = "2026-02-13"
+display_date = "February 13-14"
+name = "Orlando HamCation"
+location = "Orlando, FL"
+
+[[event]]
+date = "2026-03-01"
+display_date = "March 1"
+name = "North Carolina QSO Party"
+location = "On the Air (10:00 AM - 8:00 PM EST)"
+
+[[event]]
+date = "2026-03-01"
+display_date = "March 1"
+name = "VE Test Session"
+location = "Calabash EMS Building (9:30 AM)"
+
+[[event]]
+date = "2026-03-06"
+display_date = "March 6-7"
+name = "Charlotte Hamfest"
+location = "Friday 3PM-7PM, Saturday 8:30AM-3PM"
+
+[[event]]
+date = "2026-04-04"
+display_date = "April 4"
+name = "RARSfest / Raleigh Hamfest"
+location = "Raleigh, NC"
+
+[[event]]
+date = "2026-04-11"
+display_date = "April 11"
+name = "Bald Head Island Activation"
+location = "Bald Head Island"
+
+[[event]]
+date = "2026-04-18"
+display_date = "April 18"
+name = "VE Test Session"
+location = "Calabash EMS Building (9:30 AM)"
+
+[[event]]
+date = "2026-04-25"
+display_date = "April 25"
+name = "Cape Fear Cruisers Car Club Show"
+location = "Southport, NC"
+
+[[event]]
+date = "2026-05-15"
+display_date = "May 15-17"
+name = "Dayton Hamvention"
+location = "Xenia, OH"
+
+[[event]]
+date = "2026-06-27"
+display_date = "June 27"
+name = "VE Test Session"
+location = "Calabash EMS Building (9:30 AM)"
+
+[[event]]
+date = "2026-06-27"
+display_date = "June 27-28"
+name = "ARRL Field Day"
+location = "Calabash Town Park (Starts 9:00 AM)"
+
+[[event]]
+date = "2026-07-04"
+display_date = "July 4"
+name = "4th of July Parade"
+location = "Local Parade Route (9:00 AM)"
+
+[[event]]
+date = "2026-10-03"
+display_date = "October 3"
+name = "VE Test Session"
+location = "Calabash EMS Building (9:30 AM)"
+
+[[event]]
+date = "2026-10-17"
+display_date = "October 17"
+name = "VE Test Session"
+location = "Calabash EMS Building (9:30 AM)"
+
+[[event]]
+date = "2026-10-17"
+display_date = "October 17-18"
+name = "JOTA (Scouts Jamboree on the Air)"
+location = "Dutchman's Creek County Park"
+
+[[event]]
+date = "2026-10-24"
+display_date = "October 24"
+name = "Cape Fear Cruisers Car Club Show"
+location = "Southport, NC"
+
+[[event]]
+date = "2026-11-15"
+display_date = "November 15"
+name = "Benson JARSfest"
+location = "Benson, NC"
+
+[[event]]
+date = "2026-12-09"
+display_date = "December 9"
+name = "Annual Club Christmas Party"
+location = "TBD"

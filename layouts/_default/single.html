@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div style="background-color: #111111; width: 100%; padding: 12px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; flex-wrap: nowrap;">
+        <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; color: #ffffff; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; padding-right: 20px;">
+            {{ .Site.Title }}
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: nowrap; align-items: center;">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; transition: color 0.15s ease-in-out;">{{ .Name }}</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<article class="flex-l flex-wrap justify-between mw8 center ph3" style="margin-top: 50px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray w-100">
+      
+      {{ .Content }}
+      
+      <div style="margin-top: 60px; padding-top: 15px; border-top: 1px solid #eeeeee; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #777777; text-align: center;">
+        This page last revised: {{ .Date.Format "1/2/2006" }}
+      </div>
+
+    </div>
+</article>
+{{ end }}

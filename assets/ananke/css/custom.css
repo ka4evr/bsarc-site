@@ -1,0 +1,204 @@
+/* --- Global Theme Clean-up --- */
+
+/* Strip out the translucent dark scrim mask */
+.bg-black-60 {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Center the main homepage markdown club logo automatically */
+main article .nested-copy-line-height img[alt="BSARC Logo"] {
+    display: block;
+    margin: 30px auto 10px auto;
+    max-width: 220px;
+    height: auto;
+}
+
+/* Surgical Strike: If the page contains your full-bleed banner, completely erase the ghost "Home" title, breadcrumb, and date block */
+article:has(.full-bleed-banner) header,
+article:has(.full-bleed-banner) header.mt4 {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Nuke the massive vertical white space padding above the banner to make the layout tight */
+main:has(.full-bleed-banner),
+article:has(.full-bleed-banner) {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+
+/* --- Unified Global Navigation Bar --- */
+
+/* Force the top menu bar to be solid black and uniform across ALL pages */
+header nav.white-60 {
+    background-color: #111111 !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+/* Style the menu hyperlinks sharply */
+header nav.white-60 a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-transform: uppercase !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    letter-spacing: 0.05em !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease-in-out !important;
+}
+
+header nav.white-60 a:hover {
+    color: #ffffff !important;
+}
+
+
+/* --- Full-Bleed Image Breakout Engine --- */
+
+/* Force the banner inside the content body to break out of the boxed container edge-to-edge */
+.full-bleed-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0 !important; /* Flushes the banner perfectly up against the black nav bar */
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.full-bleed-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Erase the stubborn ghost "Home" title text overlay from the homepage header strip */
+body.home header.cover div.tc-l.pv4.pv6-l {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure the header container collapses tightly on the homepage */
+body.home header.cover {
+    min-height: auto !important;
+}
+/* Universal Target: Vaporize ANY h1 or h2 text strings floating inside the homepage header container */
+body.home header h1,
+body.home header h2,
+body.home header .f2,
+body.home header .f1 {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Hard collapse of the remaining ghost block container padding on the home layout */
+body.home header.cover > div:not(.bg-black-60) {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/* Tell the theme to completely collapse its auto-generated header block on the dashboard homepage */
+body.home header.cover {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/* Completely remove the theme's automatic parent header container ONLY on the homepage layout */
+body.home > div > header,
+body.home .site-header,
+body.home header[role="banner"] {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+/* --- Sub-Page Clean-up Engine --- */
+
+/* Vaporize the theme's automatic duplicate title, date, and breadcrumb headers on sub-pages */
+article header.mt4 {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Global Markdown Table Styling: Forces all inner-page markdown tables to match your homepage layout */
+.nested-copy-line-height table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 25px 0 35px 0 !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+/* Format the header row of markdown tables */
+.nested-copy-line-height th {
+    background-color: #f7f7f7 !important;
+    color: #111111 !important;
+    padding: 12px 10px !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    border-bottom: 2px solid #dddddd !important;
+}
+
+/* Format the content rows of markdown tables */
+.nested-copy-line-height td {
+    padding: 12px 10px !important;
+    color: #333333 !important;
+    border-bottom: 1px solid #eeeeee !important;
+    vertical-align: top !important;
+}
+
+/* Subtle row striping to make dense radio data lists easy to read */
+.nested-copy-line-height tr:nth-child(even) {
+    background-color: #fafafa !important;
+}
+/* --- Global Hero Banner Collapse --- */
+
+/* Surgical Strike: Target and erase the massive inner page title text blocks inside the header banner */
+header.cover div.tc-l,
+header.cover div.pv4,
+header.cover div.pv6-l,
+header.cover div.pv3 {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Force the theme's massive dark banner background container to collapse down to the height of the top menu bar only */
+header.cover {
+    min-height: auto !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+/* Universal Site-Wide Shutdown of Ananke's Native Header Container Box */
+header, 
+.site-header, 
+[role="banner"] {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}

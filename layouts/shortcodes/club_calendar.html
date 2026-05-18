@@ -1,0 +1,53 @@
+{{ $now := now.Format "2006-01-02" }}
+{{ $events := .Site.Data.calendar.event }}
+
+{{ $upcomingEvents := where $events "date" "ge" $now }}
+{{ $pastEvents := where $events "date" "lt" $now }}
+
+📅 Upcoming Club Events
+<div style="margin-bottom: 40px;">
+  <table style="width: 100%; border-collapse: collapse; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px;">
+    <thead>
+      <tr style="background-color: #2e7d32; color: #ffffff; text-align: left;">
+        <th style="padding: 10px; width: 25%; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em;">Date</th>
+        <th style="padding: 10px; width: 40%; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em;">Event / Activity</th>
+        <th style="padding: 10px; width: 35%; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em;">Location / Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ if gt (len $upcomingEvents) 0 }}
+        {{ range sort $upcomingEvents "date" "asc" }}
+        <tr style="border-bottom: 1px solid #eeeeee; background-color: #ffffff;">
+          <td style="padding: 12px 10px; font-weight: bold; color: #111111;">{{ .display_date }}</td>
+          <td style="padding: 12px 10px; color: #111111;"><strong>{{ .name }}</strong></td>
+          <td style="padding: 12px 10px; color: #555555; font-style: italic;">{{ .location }}</td>
+        </tr>
+        {{ end }}
+      {{ else }}
+        <tr><td colspan="3" style="padding: 20px; text-align: center; color: #777777; font-style: italic;">No further events scheduled for the current block. Check back soon!</td></tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+✅ Completed 2026 Events Archive
+<div>
+  <table style="width: 100%; border-collapse: collapse; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; opacity: 0.85;">
+    <thead>
+      <tr style="background-color: #555555; color: #ffffff; text-align: left;">
+        <th style="padding: 8px 10px; width: 25%; font-size: 11px; text-transform: uppercase;">Date</th>
+        <th style="padding: 8px 10px; width: 40%; font-size: 11px; text-transform: uppercase;">Past Event</th>
+        <th style="padding: 8px 10px; width: 35%; font-size: 11px; text-transform: uppercase;">Completed Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range sort $pastEvents "date" "desc" }}
+        <tr style="border-bottom: 1px solid #eeeeee; background-color: #f9f9f9;">
+          <td style="padding: 10px; color: #666666; text-decoration: line-through;">{{ .display_date }}</td>
+          <td style="padding: 10px; color: #444444;">{{ .name }}</td>
+          <td style="padding: 10px; color: #777777; font-style: italic;">{{ .location }}</td>
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
