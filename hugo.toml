@@ -37,11 +37,6 @@ theme = 'ananke'
   weight = 40
 
 [[menu.main]]
-  name = "Gallery"
-  url = "/gallery/"
-  weight = 40
-
-[[menu.main]]
   name = "ARRL Program"
   url = "/arrl/"
   weight = 50
