@@ -1,0 +1,123 @@
+{{ define "main" }}
+<style>
+  /* Base layout: Desktop & Tablet Landscaped view */
+  .dashboard-container { display: flex; gap: 40px; width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; box-sizing: border-box; }
+  .left-column { flex: 2; min-width: 0; box-sizing: border-box; }
+  .right-column { flex: 1; min-width: 280px; box-sizing: border-box; }
+  
+  /* 🍔 Base Desktop Navigation Setup */
+  .nav-wrapper { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: flex-end; align-items: center; box-sizing: border-box; position: relative; }
+  .nav-links-box { display: flex; gap: 25px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-links-box a { color: rgba(255, 255, 255, 0.9); text-decoration: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.15s ease-in-out; white-space: nowrap; }
+  .nav-links-box a:hover { color: #4CAF50; }
+  .menu-toggle-checkbox { display: none; }
+  .hamburger-button-icon { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .hamburger-button-icon span { display: block; width: 24px; height: 3px; background-color: #ffffff; border-radius: 2px; transition: all 0.2s ease-in-out; }
+
+  /* 📱 THE MOBILE FIX: Responsive Mobile Stack Logic */
+  @media screen and (max-width: 768px) {
+    .dashboard-container { flex-direction: column; padding: 15px; gap: 30px; width: 100% !important; margin: 0 auto !important; }
+    .left-column, .right-column { width: 100% !important; max-width: 100% !important; padding-right: 0 !important; padding-left: 0 !important; }
+    .right-column { margin-top: 20px; border-left: none !important; border-top: 1px solid #eeeeee; padding-top: 30px !important; }
+    table { width: 100% !important; display: block; overflow-x: auto; }
+    img { max-width: 100% !important; height: auto !important; }
+    
+    /* Mobile Navigation Drawer Adjustments */
+    .nav-wrapper { padding: 15px 20px; }
+    .hamburger-button-icon { display: flex; }
+    .nav-links-box { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background-color: #111111; padding: 15px 20px; gap: 15px; box-sizing: border-box; border-top: 1px solid #222222; box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
+    .nav-links-box a { display: block; width: 100%; padding: 8px 0; font-size: 15px; }
+    .menu-toggle-checkbox:checked ~ .nav-links-box { display: flex; }
+    .menu-toggle-checkbox:checked ~ .hamburger-button-icon span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle-checkbox:checked ~ .hamburger-button-icon span:nth-child(2) { opacity: 0; }
+    .menu-toggle-checkbox:checked ~ .hamburger-button-icon span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  }
+</style>
+
+<script>
+    (function() {
+        var defaultHeader = document.querySelector('header') || document.querySelector('[role="banner"]');
+        if (defaultHeader) {
+            defaultHeader.style.display = 'none';
+            defaultHeader.style.height = '0';
+            defaultHeader.style.padding = '0';
+            defaultHeader.style.margin = '0';
+        }
+    })();
+</script>
+
+<div style="background-color: #111111; width: 100%; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 9999;">
+    <div class="nav-wrapper">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="hamburger-button-icon" style="margin-left: auto;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links-box">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<div class="full-bleed-banner" style="margin-bottom: 30px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden;">
+    <img src="/images/club_banner_summer.webp" alt="Summer Banner" style="width: 100%; height: auto; display: block;">
+</div>
+
+<div class="dashboard-container">
+  
+    <div class="left-column" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <div class="nested-copy-line-height">
+            <h1 style="font-size: 28px; margin: 0 0 10px 0; color: #111111; font-weight: bold;">{{ .Title }}</h1>
+            <hr style="border: 0; border-top: 1px solid #eeeeee; margin: 20px 0;">
+            
+            {{ .Content }}
+        </div>
+    </div>
+
+    <div class="right-column" style="border-left: 1px solid #eeeeee; padding-left: 30px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+
+        <div style="margin-bottom: 35px; background-color: #f4fbf4; padding: 18px; border-radius: 8px; border: 1px solid #c8e6c9; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h3 style="font-size: 15px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #2e7d32; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #2e7d32;">Membership & Dues</h3>
+            <p style="font-size: 13px; color: #444444; line-height: 1.5; margin-bottom: 15px;">
+                Member Dues are <strong>$30.00</strong> (or $40.00 for family). You can securely pay your annual dues or make a club donation using PayPal below.
+            </p>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin: 0; display: inline-block;">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="N5NHK57GNLMZQ">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal">
+                </form>
+            </div>
+            <p style="font-size: 12px; color: #555555; line-height: 1.5; margin: 0; padding-top: 10px; border-top: 1px solid #c8e6c9;">
+                <strong>Need to join?</strong> <a href="/pdf/bsarc_membership_application.pdf" style="color: #2e7d32; text-decoration: none; font-weight: bold;">Download Application</a>.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">QRZ Callsign Lookup</h3>
+            <form action="https://www.qrz.com/db/" method="get" target="_blank" style="display: flex; gap: 8px;">
+                <input type="text" name="callsign" placeholder="Callsign..." required style="padding: 6px 10px; font-size: 13px; border: 1px solid #cccccc; border-radius: 4px; flex-grow: 1; text-transform: uppercase;">
+                <button type="submit" style="padding: 6px 14px; font-size: 13px; background-color: #111111; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Search</button>
+            </form>
+        </div>
+
+        <div style="margin-bottom: 35px; text-align: center;">
+            <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111; text-align: left;">Propagation Conditions</h3>
+            <a href="https://www.hamqsl.com/solar.html" target="_blank">
+                <img src="https://www.hamqsl.com/solarvhf.php" alt="Solar Data" style="border: none; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+            </a>
+        </div>
+
+        <h3 style="font-size: 14px; font-weight: bold; margin: 0 0 10px 0; border-bottom: 2px solid #111111; padding-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; color: #111111;">Documents & Resources</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.6;">
+            <li style="margin-bottom: 12px;"><a href="/pdf/weekly_bulletin.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">📄 Latest Weekly Bulletin (PDF)</a></li>
+            <li style="margin-bottom: 12px;"><a href="/pdf/bsarc_membership_application.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">📄 Membership Application (PDF)</a></li>
+            <li style="margin-bottom: 12px;"><a href="/pdf/arrl_band_plan.pdf" style="color: #357edd; text-decoration: none; font-weight: bold;">🗺️ ARRL Band Plan Chart (PDF)</a></li>
+        </ul>
+    </div>
+
+</div>
+{{ end }}
