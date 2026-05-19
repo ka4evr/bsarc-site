@@ -4,6 +4,9 @@ date: 2026-05-17
 draft: false
 ---
 
+<img src="/images/club_logo.webp" alt="BSARC Club Logo" style="float: right; margin: 0 0 20px 20px; max-width: 150px; height: auto; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15));">
+
+
 # Welcome to the Brunswick Shores Amateur Radio Club!
 
 Welcome to BSARC! This guide is designed to help new and prospective members get plugged into our club infrastructure, learn about our local emergency services, and connect with our committee leaders.
