@@ -4,7 +4,7 @@ date: 2026-05-17
 draft: false
 ---
 
-<img src="https://www.arrl.org/images/view/Logo/arrl_logo_diamond.jpg" alt="ARRL Diamond Logo" style="float: right; margin-left: 20px; margin-bottom: 20px; width: 120px; height: auto; border: 1px solid #eeeeee; padding: 5px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<img src="/images/arrl_logo.webp" alt="ARRL Diamond Logo" style="float: right; margin-left: 20px; margin-bottom: 20px; width: 120px; height: auto; border: 1px solid #eeeeee; padding: 5px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
 
 # ARRL Membership Application & Renewal Program
 
