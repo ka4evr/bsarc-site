@@ -1,9 +1,26 @@
 # ====================================================================
-# BSARC MULTI-SELLER MARKETPLACE DATA SHEET
+# BSARC SWAPFEST & MARKETPLACE DATA SHEET
+# ====================================================================
+# INSTRUCTIONS FOR EDITORS AND CLUB OFFICERS:
+# 
+# 💡 General Formatting Rules:
+#    - Text values MUST be wrapped in double quotation marks: "text"
+#    - Boolean switches MUST be written in lowercase: true or false
+#    - Bullet points in the specs array must be separated by commas.
+# 
+# 📝 How to update an item status:
+#    - Cash Price Item:   Set sold = false and free = false. Put the price in the "price" line.
+#    - Free/Gift Item:     Set sold = false and free = true. Clear out the price line to "".
+#    - Closed/Sold Item:   Set sold = true and free = false. Leave the original price as a reference.
+#                          The system automatically hides contact links for sold entries.
 # ====================================================================
 
-# --- EQUIPMENT WANTED ---
-# Drop any items members are actively looking to buy right here
+
+# ====================================================================
+# 🔍 SECTION 1: EQUIPMENT WANTED
+# ====================================================================
+# To remove an active request when a buyer finds their gear, delete its 
+# entire block starting from [[wanted]] down to the buyer's email line.
 
 [[wanted]]
 item = "HF Mobile Antenna (Screwdriver Style)"
@@ -20,13 +37,16 @@ buyer_call = "N4ABC"
 buyer_email = "n4abc@gmail.com"
 
 
-# --- EQUIPMENT FOR SALE ---
-# Your existing listings stay right below, perfectly separated
+# ====================================================================
+# 💰 SECTION 2: AVAILABLE EQUIPMENT (FOR SALE / FREE TO GOOD HOME)
+# ====================================================================
+# Copy and paste a complete block to add new gear to the swapfest roster.
 
 [[items]]
 name = "Legacy 13.8V 20-Amp Linear Power Supply"
 price = ""
-free = true          # <-- Add this flag for items given away
+sold = false
+free = true
 seller_name = "Mark"
 seller_call = "KA4EVR"
 seller_email = "sergentm@gmail.com"
@@ -40,7 +60,10 @@ specs = [
 [[items]]
 name = "Elecraft K3S-F, P3-F and SP3 Station"
 price = "$3000"
+sold = false
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "QRZ info valid. Original box included for most items."
 specs = [
@@ -57,7 +80,10 @@ specs = [
 [[items]]
 name = "Elecraft KX3-F, PX3-F QRP Station"
 price = "$1300"
+sold = false
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "Contact seller for photos or additional details."
 specs = [
@@ -71,7 +97,10 @@ specs = [
 [[items]]
 name = "Elecraft KPA 500 Amplifier & KAT500 Antenna Tuner"
 price = "$2250"
+sold = false
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "All equipment in excellent condition cosmetically and electronically."
 specs = [
@@ -82,7 +111,10 @@ specs = [
 [[items]]
 name = "Hardrock 50 QRP Amplifier with Built-in ATU"
 price = "$350"
+sold = false
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "Will bundle with the Elecraft KX3 setup."
 specs = [
@@ -93,7 +125,9 @@ specs = [
 name = "Icom IC-706 MKII G Mobile HF/VHF/UHF Transceiver"
 price = "$500"
 sold = true
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "Includes hand mic and separation cable."
 specs = [
@@ -105,7 +139,10 @@ specs = [
 [[items]]
 name = "Icom IC-7000 Base/Mobile Transceiver"
 price = "$600"
+sold = false
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "Excellent condition."
 specs = [
@@ -118,7 +155,9 @@ specs = [
 name = "FlexRadio Systems Flex-5000A SDR Transceiver with ATU"
 price = "$600"
 sold = true
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "Requires FireWire interface."
 specs = [
@@ -129,7 +168,10 @@ specs = [
 [[items]]
 name = "FlexRadio Systems Flex-6500 Signature Series SDR w/ ATU"
 price = "$1300"
+sold = false
+free = false
 seller_name = "Erin Douna"
+seller_call = "N4XYZ"
 seller_email = "erin.douna@gmail.com"
 seller_note = "Smart SDR v3.10.10"
 specs = [
