@@ -1,11 +1,29 @@
 # ====================================================================
-# OFFICIAL CLUB MEMBERSHIP ROSTER - UPDATED 3/17/2026
+# 👥 OFFICIAL CLUB MEMBERSHIP ROSTER
+# ====================================================================
+# INSTRUCTIONS FOR EDITORS AND CLUB OFFICERS:
+# 
+# 💡 General Formatting Rules:
+#    - Text values MUST be wrapped in double quotation marks: "text"
+#    - To add a new ham, copy a full [[member]] block and paste it at the bottom.
+#    - "position" options typically include: "Member", "Member Family", 
+#      "Treasurer", "Secretary", "Vice President", "President", or "Associate".
 # ====================================================================
 
 [[member]]
 name = "Aiken, Jeff"
 call = "KZ4ER"
 position = "Member"
+
+[[member]]
+name = "Alvarez, Rick"
+call = "WA6SUZ"
+position = "Associate"
+
+[[member]]
+name = "Abeyounis, Morris"
+call = "KD4MEA"
+position = "Associate"
 
 [[member]]
 name = "Annunziata, Gary"
@@ -26,6 +44,11 @@ position = "Member"
 name = "Babson, Denita"
 call = "KM4SBK"
 position = "Member"
+
+[[member]]
+name = "Babson, Joseph"
+call = "NONE"
+position = "Associate"
 
 [[member]]
 name = "Bean, John"
@@ -56,6 +79,16 @@ position = "Member"
 name = "Brown, Frank"
 call = "KF4XY"
 position = "Member"
+
+[[member]]
+name = "Brunjes, Alfred"
+call = "KM4TTK"
+position = "Associate"
+
+[[member]]
+name = "Bryant, Darrell"
+call = "KJ4HKA"
+position = "Associate"
 
 [[member]]
 name = "Buswell, Peter"
@@ -91,6 +124,11 @@ position = "Member"
 name = "Curson, Alan"
 call = "WD9GMK"
 position = "Member"
+
+[[member]]
+name = "Deacon, John"
+call = "KB4OI"
+position = "Associate"
 
 [[member]]
 name = "Douna, Erin"
@@ -158,6 +196,11 @@ call = "KO4NAP"
 position = "Member"
 
 [[member]]
+name = "Gavrilovic, Obrad"
+call = "KQ4GMT"
+position = "Associate"
+
+[[member]]
 name = "Gawron, Paul"
 call = "KI4SPO"
 position = "Member"
@@ -166,6 +209,11 @@ position = "Member"
 name = "Gilbert, Tony"
 call = "N2TG"
 position = "Member"
+
+[[member]]
+name = "Goeckel, Larry"
+call = "WB2MXX"
+position = "Associate"
 
 [[member]]
 name = "Grogan, Ed"
@@ -188,6 +236,11 @@ call = "WB2ZIA"
 position = "Member"
 
 [[member]]
+name = "Hipple, Michael"
+call = "AF3M"
+position = "Associate"
+
+[[member]]
 name = "Holbrook, David"
 call = "KC4SGT"
 position = "Member"
@@ -196,6 +249,11 @@ position = "Member"
 name = "Holden, Mark"
 call = "KR4HLL"
 position = "Member"
+
+[[member]]
+name = "Hudson, Mark"
+call = "N1KFC"
+position = "Associate"
 
 [[member]]
 name = "Hughes, Michael"
@@ -233,6 +291,11 @@ call = "KR4BB"
 position = "Member"
 
 [[member]]
+name = "Kuebert, Ed"
+call = "K5EK"
+position = "Associate"
+
+[[member]]
 name = "Lanahan, Bill"
 call = "WA2NFN"
 position = "Member"
@@ -251,6 +314,26 @@ position = "Member"
 name = "Madden, John"
 call = "N4EJM"
 position = "Member"
+
+[[member]]
+name = "Madsen, Laurie"
+call = "KM4GRU"
+position = "Associate"
+
+[[member]]
+name = "Magnabosco, Paul"
+call = "AD4HZ"
+position = "Associate"
+
+[[member]]
+name = "Mazzei, Joe"
+call = "KI4JM"
+position = "Associate"
+
+[[member]]
+name = "Mazzei, Nancy"
+call = "KI4GSL"
+position = "Associate"
 
 [[member]]
 name = "McGlynn, John"
@@ -303,6 +386,11 @@ call = "N8TQG"
 position = "Member Family"
 
 [[member]]
+name = "Perriello, Dean"
+call = "N4TYS"
+position = "Associate"
+
+[[member]]
 name = "Pennell, David"
 call = "NP2MR"
 position = "Board Member"
@@ -323,7 +411,7 @@ call = "W8YP"
 position = "Member"
 
 [[member]]
-name = "Pittenger, Paul"
+name = "Properties, Paul"
 call = "N4PEP"
 position = "Member"
 
@@ -361,6 +449,11 @@ position = "Member"
 name = "Renfree, Peter"
 call = "K1YC"
 position = "Member"
+
+[[member]]
+name = "Seibel, Frank"
+call = "WA3EML"
+position = "Associate"
 
 [[member]]
 name = "Seaton, Curt"
@@ -403,6 +496,16 @@ call = "KZ4JC"
 position = "Member"
 
 [[member]]
+name = "Stephens, Keith"
+call = "KO4NBT"
+position = "Associate"
+
+[[member]]
+name = "Stratton, Ed"
+call = "W1ZZ"
+position = "Associate"
+
+[[member]]
 name = "Swarm, Donald L"
 call = "N3TYF"
 position = "Member"
@@ -438,9 +541,14 @@ call = "K4ELW"
 position = "Member"
 
 [[member]]
-name = "Williams, Chris"
-call = "KR4BRW"
-position = "Member"
+name = "White, Stan"
+call = "KI4NC"
+position = "Associate"
+
+[[member]]
+name = "Whitehead, Kevin"
+call = "N2KJW"
+position = "Associate"
 
 [[member]]
 name = "Williams, Chris"
@@ -458,6 +566,11 @@ call = "K9EZ"
 position = "Member"
 
 [[member]]
+name = "Winters, Teren"
+call = "KO4HWX"
+position = "Associate"
+
+[[member]]
 name = "Womble, Mike"
 call = "KZ4RUN"
 position = "Member"
@@ -466,116 +579,6 @@ position = "Member"
 name = "Worth, Warren"
 call = "KB2DLF"
 position = "Member"
-
-[[member]]
-name = "Abeyounis, Morris"
-call = "KD4MEA"
-position = "Associate"
-
-[[member]]
-name = "Alvarez, Rick"
-call = "WA6SUZ"
-position = "Associate"
-
-[[member]]
-name = "Babson, Joseph"
-call = "NONE"
-position = "Associate"
-
-[[member]]
-name = "Brunjes, Alfred"
-call = "KM4TTK"
-position = "Associate"
-
-[[member]]
-name = "Bryant, Darrell"
-call = "KJ4HKA"
-position = "Associate"
-
-[[member]]
-name = "Deacon, John"
-call = "KB4OI"
-position = "Associate"
-
-[[member]]
-name = "Gavrilovic, Obrad"
-call = "KQ4GMT"
-position = "Associate"
-
-[[member]]
-name = "Goeckel, Larry"
-call = "WB2MXX"
-position = "Associate"
-
-[[member]]
-name = "Hipple, Michael"
-call = "AF3M"
-position = "Associate"
-
-[[member]]
-name = "Hudson, Mark"
-call = "N1KFC"
-position = "Associate"
-
-[[member]]
-name = "Kuebert, Ed"
-call = "K5EK"
-position = "Associate"
-
-[[member]]
-name = "Madsen, Laurie"
-call = "KM4GRU"
-position = "Associate"
-
-[[member]]
-name = "Magnabosco, Paul"
-call = "AD4HZ"
-position = "Associate"
-
-[[member]]
-name = "Mazzei, Joe"
-call = "KI4JM"
-position = "Associate"
-
-[[member]]
-name = "Mazzei, Nancy"
-call = "KI4GSL"
-position = "Associate"
-
-[[member]]
-name = "Perriello, Dean"
-call = "N4TYS"
-position = "Associate"
-
-[[member]]
-name = "Seibel, Frank"
-call = "WA3EML"
-position = "Associate"
-
-[[member]]
-name = "Stephens, Keith"
-call = "KO4NBT"
-position = "Associate"
-
-[[member]]
-name = "Stratton, Ed"
-call = "W1ZZ"
-position = "Associate"
-
-[[member]]
-name = "White, Stan"
-call = "KI4NC"
-position = "Associate"
-
-[[member]]
-name = "Whitehead, Kevin"
-call = "N2KJW"
-position = "Associate"
-
-[[member]]
-name = "Winters, Teren"
-call = "KO4HWX"
-position = "Associate"
 
 [[member]]
 name = "Young, Bill"

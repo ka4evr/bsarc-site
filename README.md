@@ -1,6 +1,6 @@
 📻 Brunswick Shores Amateur Radio Club (BSARC) - Web Platform Manual
 
-Welcome to the official station log and technical operating manual for the **BSARC Website Source Framework** (`n4gm.org`). This platform utilizes the **Hugo Static Site Generator** paired with the customized **Ananke Theme** to compile a ultra-fast, modern, database-free web application hosted entirely via **GitHub Pages**.
+Welcome to the official station log and technical operating manual for the **BSARC Website Source Framework** (`n4gm.org`). This platform utilizes the **Hugo Static Site Generator** paired with the customized **Ananke Theme** to compile an ultra-fast, modern, database-free web application hosted entirely via **GitHub Pages**.
 
 ---
 
@@ -9,12 +9,6 @@ Welcome to the official station log and technical operating manual for the **BSA
 To test modifications locally or deploy updates directly to the live server, open your Zorin terminal workspace at `/home/mark/bsarc-site` and execute these specific command line strings:
 
 ### 1. Launch Local Testing Sandbox Server
-
-```
-
-```text
-SUCCESS: README.md written flawlessly.
-
 ```bash
 hugo server --bind 0.0.0.0
 
@@ -85,6 +79,20 @@ Allows individual appointed Emergency Coordinators (ECs) or PIO operators to iss
 
 * `link_button_active = true` -> Draws an action button inside the alert that maps out to a deep subpage (`/notice/`). This page parses your ongoing chronological line-by-line `[[updates]]` log feed timeline wire as an activation window unfolds.
 
+### 👥 5. Membership Database (`data/members.toml`)
+
+Manages the complete active alphabetical membership roster directory table.
+
+* To add an entry, copy a full `[[member]]` block and paste it at the bottom.
+* Fields map automatically to columns on the public index. Keep strings wrapped in quotation marks.
+
+### 🏛️ 6. Leadership & Committees (`data/roster.toml`)
+
+Controls elected Board positions and appointed task chairs independently from the raw membership roster.
+
+* `[[officers]]` -> Manages the core Board of Directors.
+* `[[committees]]` -> Manages event chairs, food teams, trustees, and specialized volunteer roles.
+
 ---
 
 ## 🏗️ Folder Hierarchy Topography
@@ -95,7 +103,9 @@ Allows individual appointed Emergency Coordinators (ECs) or PIO operators to iss
 │   ├── calendar.toml        # Annual chronological tracking matrix
 │   ├── forsale.toml         # Active ham radio swapfest marketplace listings
 │   ├── homepage.toml        # Core index info text blocks, nets, and sidebar variables
-│   └── notice.toml          # Emergency alerts notice profiles & chronological log logs
+│   ├── members.toml         # Complete active club member table database
+│   ├── notice.toml          # Emergency alerts notice profiles & chronological log logs
+│   └── roster.toml          # Appointed committee chairs and corporate board roles
 ├── content/                 # Site layout markup pages paths
 │   ├── calendar.md          # Content route that executes the Master Calendar template
 │   ├── notice.md            # Content route that executes the Tactical Log Timeline template
@@ -126,4 +136,3 @@ Allows individual appointed Emergency Coordinators (ECs) or PIO operators to iss
 ---
 
 *Brunswick Shores Amateur Radio Club — Securing Reliable Communications for Southeastern North Carolina Since 2026.*
-"""

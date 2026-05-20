@@ -1,5 +1,13 @@
 # ====================================================================
-# MASTER CLUB ROSTER DATA SHEET - UPDATE ONCE, UPDATES BOTH PAGES
+# 🏛️ MASTER CLUB ROSTER & LEADERSHIP DATA SHEET
+# ====================================================================
+# INSTRUCTIONS FOR EDITORS AND CLUB OFFICERS:
+# 
+# 💡 General Formatting Rules:
+#    - Text values MUST be wrapped in double quotation marks: "text"
+#    - "[[officers]]" refers to the core elected Board of Directors.
+#    - "[[committees]]" manages appointed chairs and group task volunteers.
+#    - Reassigning positions simply requires changing the text strings.
 # ====================================================================
 
 # --- Core Elected Board Members ---
