@@ -16,13 +16,13 @@
 
 # ====================================================================
 # 🖼️ SEASONAL HEADER BANNER
-# club_banner_summer.webp
-# club_banner_fall.webp
-# club_banner_winter.webp
-# club_banner_spring.webp
 # ====================================================================
 [banner]
-image = "/images/club_banner_summer.webp" # Path to your image asset file
+
+#image = "/images/club_banner_spring.webp"
+image = "/images/club_banner_summer.webp"
+#image = "/images/club_banner_fall.webp"
+#image = "/images/club_banner_winter.webp"
 alt = "Brunswick Shores ARC Banner"
 
 
